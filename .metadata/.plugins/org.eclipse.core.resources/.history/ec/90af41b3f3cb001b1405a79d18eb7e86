@@ -1,0 +1,5 @@
+package com.fimdapicada.backend.config;
+
+public class SecurityConfig {
+
+}

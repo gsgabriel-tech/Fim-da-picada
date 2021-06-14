@@ -1,0 +1,16 @@
+package com.fimdapicada.backend.controllers;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.fimdapicada.backend.services.DenunciaService;
+
+@RestController
+@RequestMapping(value="/denuncia")
+public class DenunciaController {
+	
+	private DenunciaService service;
+	
+	
+
+}

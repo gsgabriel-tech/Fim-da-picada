@@ -1,0 +1,36 @@
+package com.fimdapicada.backend.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.fimdapicada.backend.dto.DenunciaDTO;
+import com.fimdapicada.backend.entities.denuncia;
+import com.fimdapicada.backend.repositories.DenunciaRepository;
+
+@Service
+public class DenunciaService {
+       
+	@Autowired
+	private DenunciaRepository repository;
+	
+
+	public DenunciaDTO  insert(DenunciaDTO denunDto ) {	
+		denuncia denuncia = new denuncia(denunDto.getId(),
+				denunDto.getDescricao(),
+				denunDto.getEmail(),	
+				denunDto.getNumero(),
+				denunDto.getRua(),
+				denunDto.getLogadouro(),
+				denunDto.getComplemento(),
+				denunDto.getBairro(),
+				denunDto.getCep(),
+				denunDto.getCidade(),
+				denunDto.getEstado());
+	
+		//objeto convertido para entity indo para camada de acesso a dados
+		denuncia = repository.save(denuncia);
+		return new DenunciaDTO(denuncia);
+	}
+	
+		
+}

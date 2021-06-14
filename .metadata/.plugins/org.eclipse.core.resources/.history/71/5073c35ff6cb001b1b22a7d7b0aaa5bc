@@ -1,0 +1,5 @@
+package com.fimdapicada.backend.entities;
+
+public class Denuncias {
+
+}

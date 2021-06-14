@@ -1,0 +1,13 @@
+package com.fimdapicada.backend.services;
+
+import org.springframework.stereotype.Service;
+
+import com.fimdapicada.backend.repositories.RelatorioRepository;
+
+@Service
+public class RelatorioService {
+	
+		private RelatorioRepository repository;
+
+
+}

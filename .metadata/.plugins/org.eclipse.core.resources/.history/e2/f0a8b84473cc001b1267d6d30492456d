@@ -1,0 +1,5 @@
+package com.fimdapicada.backend.controllers;
+
+public class DenunciaController {
+
+}

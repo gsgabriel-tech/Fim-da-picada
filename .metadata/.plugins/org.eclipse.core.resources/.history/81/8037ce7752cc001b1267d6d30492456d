@@ -1,0 +1,5 @@
+package com.fimdapicada.backend.services;
+
+public class RelatorioService {
+
+}
