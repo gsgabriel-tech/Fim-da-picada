@@ -1,0 +1,10 @@
+footer{
+    position:relative !important;
+    bottom:0;
+    width:100%;
+}
+.redeSocial ul li{
+    display: inline-block;
+    margin-right: 5px;
+    float: right;
+}

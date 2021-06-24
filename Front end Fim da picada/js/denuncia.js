@@ -47,6 +47,18 @@ function executaPost(url, dadosPost) {
 
 }
 
+ValidarDenuncia = async() => {
+    if(document.getElementById('cep').value != "", document.getElementById('estado').value != "",
+    document.getElementById('cidade').value != "", document.getElementById('bairro').value != "",
+    document.getElementById('rua').value != "") {
+        await CadastrarDenuncia();
+        alert("Denúncia realizada com sucesso");
+        window.location.reload();
+    }else{
+        alert("Dados incompletos");
+    }
+}
+
 function CadastrarDenuncia() {        
     let url = "http://localhost:8080/denuncia";
     let cep = document.getElementById("cep").value;
@@ -69,7 +81,6 @@ function CadastrarDenuncia() {
         "descricao": descricao,
     }
     executaPost(url, dadosPost);
-
-
+    return null;
 }
 
