@@ -13,9 +13,9 @@ body{
     /*background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);*/
 }
 footer{
-    background-color: black;
+    background-color: #34495e;
 }
 .rodape{
     width: 100%;
-    height: 60px;
+    height: 85px;
 }
