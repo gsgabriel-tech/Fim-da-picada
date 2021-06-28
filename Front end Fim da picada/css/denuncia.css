@@ -9,6 +9,7 @@ fieldset {
 body, input, select, textarea, button {
     font-family: sans-serif;
     font-size: 1em;
+    outline: none;
 }
 
 input {
