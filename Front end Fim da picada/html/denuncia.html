@@ -21,34 +21,34 @@
         
     <form action="#" method="post" class="form">
         <fieldset>
-            <h1>Envie sua denúncia para ao Fim Da Picada</h1>
+            <h1 id="titulo-form">Denúncia Anônima</h1>
             <fieldset class="grupo">
                 <div class="campo">
                     <label for="cep">Cep</label>
                     <input type="text" id="cep" name="cep" style="width: 10em" value=""
-                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="8">
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="8" placeholder="digite seu Cep">
                 </div>
             </fieldset>
 
             <fieldset class="grupo">
                 <div class="campo">
                     <label for="estado">Estado:</label>
-                    <input type="text" id="estado" name="estado" style="width: 10em" value="">
+                    <input type="text" id="estado" name="estado" style="width: 10em" value="" placeholder="Ex: MS">
                 </div>
                 <div class="campo">
                     <label for="cidade">Cidade:</label>
-                    <input type="text" id="cidade" name="cidade" style="width: 10em" value="">
+                    <input type="text" id="cidade" name="cidade" style="width: 10em" value="" placeholder="Ex: Campo Grande">
                 </div>
             </fieldset>
 
             <Fieldset class="grupo">
                 <div class="campo">
                     <label for="bairro">Bairro:</label>
-                    <input type="text" id="bairro" name="bairro" style="width: 10em" value="">
+                    <input type="text" id="bairro" name="bairro" style="width: 10em" value="" placeholder="Ex: Bom Retiro">
                 </div>
                 <div class="campo">
                     <label for="rua">Rua:</label>
-                    <input type="text" id="rua" name="rua" style="width: 10em" value="">
+                    <input type="text" id="rua" name="rua" style="width: 10em" value="" placeholder="Ex: Santa Gertrudes">
                 </div>
             </Fieldset>
 
@@ -56,18 +56,18 @@
                 <div class="campo">
                     <label for="numero">Número</label>
                     <input type="text" id="numero" name="numero" style="width: 10em" value=""
-                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="8">
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="8" placeholder="Ex: 892">
                 </div>
                 <div class="campo">
                     <label for="complemento">Complemento:</label>
-                    <input type="text" id="complemento" name="complemento" style="width: 10em" value="">
+                    <input type="text" id="complemento" name="complemento" style="width: 10em" value="" placeholder="Ex: Casa 2">
                 </div>
             </Fieldset>
 
             <fieldset class="grupo">
                 <div class="campo">
                     <label for="descricao">Descrição</label>
-                    <textarea rows="6" style="width: 20em" id="descricao" name="descricao"></textarea>
+                    <textarea rows="6" style="width: 20em" id="descricao" name="descricao" placeholder="digite aqui a Descrição"></textarea>
                 </div>
             </fieldset>
             <fieldset class="grupo">
