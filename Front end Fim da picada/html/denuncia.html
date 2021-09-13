@@ -55,7 +55,7 @@
             <Fieldset class="grupo">
                 <div class="campo">
                     <label for="numero">Número</label>
-                    <input type="text" id="numero" name="numero" style="width: 10em" value=""
+                    <input type="text" id="numero" name="numero" style="width: 10em" value=""  required="number"
                     onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="8" placeholder="Ex: 892">
                 </div>
                 <div class="campo">
@@ -67,12 +67,13 @@
             <fieldset class="grupo">
                 <div class="campo">
                     <label for="descricao">Descrição</label>
-                    <textarea rows="6" style="width: 20em" id="descricao" name="descricao" placeholder="Digite aqui a Descrição"></textarea>
+                    <textarea rows="6" style="width: 22em" id="descricao" name="descricao" placeholder="Digite aqui a Descrição" maxlength="300"></textarea>
                 </div>
             </fieldset>
             <fieldset class="grupo">
-                <div class="campo">
-                    <label for="foto_video" class="foto_video">Adicione uma foto e/ou video</label>
+                <div class="campo-file">
+                    <!--<label for="foto_video" class="foto_video">Adicione uma foto e/ou video</label>-->
+                    <button class="btn">Upload a file</button>
                     <input class="foto_video" type="file" id="foto_video" multiple>
                 </div>
             </fieldset>

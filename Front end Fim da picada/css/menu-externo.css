@@ -48,3 +48,57 @@ a:hover {
     border: 1px solid aqua;
     transition: .5s;
 }
+
+label[for="bt-menu"]{
+    padding: 5px;
+    background-color: #34495e;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+#bt-menu {
+    display: none;
+}
+
+label[for="bt-menu"] {
+    display: none;
+}
+
+@media (max-width: 800px) {
+
+    label[for="bt-menu"] {
+        display: block;
+    }
+
+    #bt-menu:checked ~ .menu {
+        margin-left: 0;
+    }
+
+    .menu {
+        margin-top: 1px;
+        margin-left: -100%;
+        transition: all .4s;
+    }
+
+    .menu ul li {
+        width: 100%;
+        float: none;
+    }
+
+    .menu ul ul {
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .4s;
+    }
+
+    .menu ul li:hover ul {
+        height: auto;
+        max-height: 200px;
+    }
+}
+/**/

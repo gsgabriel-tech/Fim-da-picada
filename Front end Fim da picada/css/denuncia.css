@@ -64,9 +64,25 @@ fieldset.grupo .campo {
     border-bottom: solid 2px #34495e;
 }
 
+.grupo input:focus {
+    border-bottom: 2px solid #000000;
+}
+
 .campo select option {
     padding-right: 1em;
 }
+
+.campo textarea {
+    resize: none;
+}
+
+textarea:invalid {
+    border: 1px solid red;
+}
+
+/*formatando o campo dos arquivos*/
+
+
 
 .campo input:focus, .campo select:focus, .campo textarea:focus {
     background: rgb(255, 255, 255);
