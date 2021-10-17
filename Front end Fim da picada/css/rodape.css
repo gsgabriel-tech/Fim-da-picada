@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+footer{
+    position:relative !important;
+    bottom:0;
+    width:100%;
+}
+footer .nome{
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    padding: 0px;
+}
+
+.redeSocial ul li{
+    margin-top: 25px;
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
+    float: right;
+    z-index: 2;
+}

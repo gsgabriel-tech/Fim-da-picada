@@ -1,0 +1,16 @@
+.texto-sobre-master{
+    margin-left: 5%;
+    max-width: 90%;
+    margin-top: auto;
+}
+.texto-sobre{
+    text-align: justify;
+    padding: 50px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.500);
+    font-size: 20px;
+    margin-bottom: 5%;
+}
+.texto-sobre h1{
+    text-align: center;
+}
