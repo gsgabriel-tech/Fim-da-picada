@@ -7,19 +7,20 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table (name="tb_denuncia")
 public class denuncia implements Serializable {
 	private static final long serialVersionUID = 1L;	
+	
 	@Id
     @GeneratedValue (strategy=GenerationType.IDENTITY)
-	private Integer id;
+	private Integer id;	
 	private String descricao;
-	private String email;
 	// private File foto; a resolver
+	//Numero casa
 	private Integer numero;
 	private String rua;
 	private String logadouro;
@@ -28,23 +29,27 @@ public class denuncia implements Serializable {
 	private String cep;
 	private String cidade;
 	private String estado;
+	private String status;
+	private Integer protocolo;
 	
+	@OneToOne
+	@JoinColumn(name="id_relatorio", referencedColumnName="id")
+	private  relatorio relatorio;
 	
-	/*@ManyToOne
-	@JoinColumn(name="id_orgaocompetente", referencedColumnName="id")
-	private  orgaocompetente orgaocompetente;*/
-	
+
+
 	public denuncia() {
 		super();
-
 	}
+	
+	
 
-	public denuncia(Integer id, String descricao, String email, Integer numero, String rua, String logadouro,
-			String complemento, String bairro, String cep, String cidade, String estado) {
+
+	public denuncia(Integer id, String descricao, Integer numero, String rua, String logadouro, String complemento,
+			String bairro, String cep, String cidade, String estado, String status, Integer protocolo) {
 		super();
 		this.id = id;
 		this.descricao = descricao;
-		this.email = email;
 		this.numero = numero;
 		this.rua = rua;
 		this.logadouro = logadouro;
@@ -53,13 +58,15 @@ public class denuncia implements Serializable {
 		this.cep = cep;
 		this.cidade = cidade;
 		this.estado = estado;
+		this.status = status;
+		this.protocolo = protocolo;
 	}
 
-	
-	
+
 	public Integer getId() {
 		return id;
 	}
+
 
 	public void setId(Integer id) {
 		this.id = id;
@@ -71,14 +78,6 @@ public class denuncia implements Serializable {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
 	}
 
 	public Integer getNumero() {
@@ -145,10 +144,26 @@ public class denuncia implements Serializable {
 		this.estado = estado;
 	}
 
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public Integer getProtocolo() {
+		return protocolo;
+	}
+
+	public void setProtocolo(Integer protocolo) {
+		this.protocolo = protocolo;
+	}
+
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

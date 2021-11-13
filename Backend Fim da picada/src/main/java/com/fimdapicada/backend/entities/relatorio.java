@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,31 +22,27 @@ public class relatorio implements Serializable {
     @GeneratedValue (strategy=GenerationType.IDENTITY)
 	private Integer id;
 	private String nome_empresa;
-	private Date data_inicio;
-	private Date data_termino;
+	private Date data;
+
 	
 	private String descricao;
 	
-	/*@ManyToOne
-	@JoinColumn(name="id_orgaocompetente", referencedColumnName="id")
-	private  orgaocompetente orgaocompetente;
-	
 	@OneToMany(mappedBy = "relatorio")
-	private List<denuncia> denuncia;*/
+	private List<denuncia> denuncia;
 	
 	public relatorio() {
 		super();
-		// TODO Auto-generated constructor stub
+	
 	}
-	public relatorio(Integer id, String nome_empresa, Date data_inicio, Date data_termino, String denuncia,
+	public relatorio(Integer id, String nome_empresa, Date data,String denuncia,
 			String descricao) {
 		super();
 		this.id = id;
 		this.nome_empresa = nome_empresa;
-		this.data_inicio = data_inicio;
-		this.data_termino = data_termino;
+		this.data = data;
 		this.descricao = descricao;
 	}
+	
 	public Integer getId() {
 		return id;
 	}
@@ -58,23 +55,23 @@ public class relatorio implements Serializable {
 	public void setNome_empresa(String nome_empresa) {
 		this.nome_empresa = nome_empresa;
 	}
-	public Date getData_inicio() {
-		return data_inicio;
+	public Date getData() {
+		return data;
 	}
-	public void setData_inicio(Date data_inicio) {
-		this.data_inicio = data_inicio;
-	}
-	public Date getData_termino() {
-		return data_termino;
-	}
-	public void setData_termino(Date data_termino) {
-		this.data_termino = data_termino;
+	public void setData(Date data) {
+		this.data = data;
 	}
 	public String getDescricao() {
 		return descricao;
 	}
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+	public List<denuncia> getDenuncia() {
+		return denuncia;
+	}
+	public void setDenuncia(List<denuncia> denuncia) {
+		this.denuncia = denuncia;
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;

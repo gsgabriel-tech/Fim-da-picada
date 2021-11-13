@@ -12,8 +12,7 @@ public class RelatorioDTO implements Serializable{
 	    
 	    private Integer id;
 		private String nome_empresa;
-		private Date data_inicio;
-		private Date data_termino;
+		private Date data;
 		private String descricao;
 		
 		
@@ -24,13 +23,12 @@ public class RelatorioDTO implements Serializable{
 
 
 
-		public RelatorioDTO(Integer id, String nome_empresa, Date data_inicio, Date data_termino, String denuncia,
+		public RelatorioDTO(Integer id, String nome_empresa, Date data, String denuncia,
 				String descricao) {
 			super();
 			this.id = id;
-			this.nome_empresa = nome_empresa;
-			this.data_inicio = data_inicio;
-			this.data_termino = data_termino;
+			this.nome_empresa = nome_empresa;			
+			this.data = data;
 			this.descricao = descricao;
 		}
 
@@ -38,8 +36,7 @@ public class RelatorioDTO implements Serializable{
 			super();
 			this.id = entity.getId();
 			this.nome_empresa = entity.getNome_empresa();
-			this.data_inicio = entity.getData_inicio();
-			this.data_termino = entity.getData_termino();
+			this.data = entity.getData();
 			this.descricao = entity.getDescricao();
 		}
 
@@ -69,27 +66,17 @@ public class RelatorioDTO implements Serializable{
 
 
 
-		public Date getData_inicio() {
-			return data_inicio;
+		public Date getData() {
+			return data;
 		}
 
 
 
-		public void setData_inicio(Date data_inicio) {
-			this.data_inicio = data_inicio;
+		public void setData(Date data) {
+			this.data = data;
 		}
 
 
-
-		public Date getData_termino() {
-			return data_termino;
-		}
-
-
-
-		public void setData_termino(Date data_termino) {
-			this.data_termino = data_termino;
-		}
 
 		public String getDescricao() {
 			return descricao;
@@ -100,6 +87,11 @@ public class RelatorioDTO implements Serializable{
 		public void setDescricao(String descricao) {
 			this.descricao = descricao;
 		}
-			
+
+
+
+		public static long getSerialversionuid() {
+			return serialVersionUID;
+		}
 		
 }

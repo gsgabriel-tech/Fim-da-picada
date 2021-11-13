@@ -10,7 +10,6 @@ public class DenunciaDTO implements Serializable{
 	
     private Integer id;
 	private String descricao;
-	private String email;
 	// private File foto; a resolver
 	private Integer numero;
 	private String rua;
@@ -20,19 +19,20 @@ public class DenunciaDTO implements Serializable{
 	private String cep;
 	private String cidade;
 	private String estado;
-	
+	private String status;
+	private Integer protocolo;
 	
 	public DenunciaDTO() {
 		super();
 	}
 
 
-	public DenunciaDTO(Integer id, String descricao, String email, Integer numero, String rua, String logadouro,
-			String complemento, String bairro, String cep, String cidade, String estado) {
+	
+	public DenunciaDTO(Integer id, String descricao, Integer numero, String rua, String logadouro, String complemento,
+			String bairro, String cep, String cidade, String estado, String status, Integer protocolo) {
 		super();
 		this.id = id;
 		this.descricao = descricao;
-		this.email = email;
 		this.numero = numero;
 		this.rua = rua;
 		this.logadouro = logadouro;
@@ -41,12 +41,16 @@ public class DenunciaDTO implements Serializable{
 		this.cep = cep;
 		this.cidade = cidade;
 		this.estado = estado;
+		this.status = status;
+		this.protocolo = protocolo;
 	}
+
+
+
 	public DenunciaDTO(denuncia entity) {
 		super();
 		this.id = entity.getId();
 		this.descricao = entity.getDescricao();
-		this.email = entity.getEmail();
 		this.numero = entity.getNumero();
 		this.rua = entity.getRua();
 		this.logadouro = entity.getLogadouro();
@@ -55,7 +59,10 @@ public class DenunciaDTO implements Serializable{
 		this.cep = entity.getCep();
 		this.cidade = entity.getCidade();
 		this.estado = entity.getEstado();
+		this.status = entity.getStatus();
+		this.protocolo = entity.getProtocolo();
 	}
+
 
 
 	public Integer getId() {
@@ -63,9 +70,11 @@ public class DenunciaDTO implements Serializable{
 	}
 
 
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
 
 
 	public String getDescricao() {
@@ -73,19 +82,11 @@ public class DenunciaDTO implements Serializable{
 	}
 
 
+
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
 
-
-	public String getEmail() {
-		return email;
-	}
-
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
 
 
 	public Integer getNumero() {
@@ -93,9 +94,11 @@ public class DenunciaDTO implements Serializable{
 	}
 
 
+
 	public void setNumero(Integer numero) {
 		this.numero = numero;
 	}
+
 
 
 	public String getRua() {
@@ -103,9 +106,11 @@ public class DenunciaDTO implements Serializable{
 	}
 
 
+
 	public void setRua(String rua) {
 		this.rua = rua;
 	}
+
 
 
 	public String getLogadouro() {
@@ -113,9 +118,11 @@ public class DenunciaDTO implements Serializable{
 	}
 
 
+
 	public void setLogadouro(String logadouro) {
 		this.logadouro = logadouro;
 	}
+
 
 
 	public String getComplemento() {
@@ -123,9 +130,11 @@ public class DenunciaDTO implements Serializable{
 	}
 
 
+
 	public void setComplemento(String complemento) {
 		this.complemento = complemento;
 	}
+
 
 
 	public String getBairro() {
@@ -133,9 +142,11 @@ public class DenunciaDTO implements Serializable{
 	}
 
 
+
 	public void setBairro(String bairro) {
 		this.bairro = bairro;
 	}
+
 
 
 	public String getCep() {
@@ -143,9 +154,11 @@ public class DenunciaDTO implements Serializable{
 	}
 
 
+
 	public void setCep(String cep) {
 		this.cep = cep;
 	}
+
 
 
 	public String getCidade() {
@@ -153,9 +166,11 @@ public class DenunciaDTO implements Serializable{
 	}
 
 
+
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
 	}
+
 
 
 	public String getEstado() {
@@ -163,9 +178,42 @@ public class DenunciaDTO implements Serializable{
 	}
 
 
+
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
+
+
+
+	public String getStatus() {
+		return status;
+	}
+
+
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+
+
+	public Integer getProtocolo() {
+		return protocolo;
+	}
+
+
+
+	public void setProtocolo(Integer protocolo) {
+		this.protocolo = protocolo;
+	}
+
+
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 	
 	
+
+
 }

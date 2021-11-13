@@ -6,7 +6,4 @@ import com.fimdapicada.backend.entities.denuncia;
 
 public interface DenunciaRepository extends JpaRepository <denuncia, Integer> {
 	
-	
-		
-	
 }

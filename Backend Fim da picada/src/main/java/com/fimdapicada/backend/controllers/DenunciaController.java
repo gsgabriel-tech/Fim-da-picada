@@ -22,5 +22,7 @@ public class DenunciaController {
 		denunciaDTO = service.insert(denunciaDTO);
 		return ResponseEntity.ok() .body(denunciaDTO);
 	}
+	
+	
 
 }

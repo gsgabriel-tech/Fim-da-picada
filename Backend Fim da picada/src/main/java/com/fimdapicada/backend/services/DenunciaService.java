@@ -15,10 +15,11 @@ public class DenunciaService {
 	private DenunciaRepository repository;
 	
 	@Transactional(readOnly = true)
+	
 	public DenunciaDTO  insert(DenunciaDTO denunDto ) {	
-		denuncia denuncia = new denuncia(denunDto.getId(),
+		denuncia denuncia = new denuncia(
+				denunDto.getId(),
 				denunDto.getDescricao(),
-				denunDto.getEmail(),	
 				denunDto.getNumero(),
 				denunDto.getRua(),
 				denunDto.getLogadouro(),
@@ -26,12 +27,15 @@ public class DenunciaService {
 				denunDto.getBairro(),
 				denunDto.getCep(),
 				denunDto.getCidade(),
-				denunDto.getEstado());
+				denunDto.getEstado(),
+				denunDto.getStatus(),
+				denunDto.getProtocolo());
 	
-		//objeto convertido para entity indo para camada de acesso a dados
+		
 		denuncia = repository.save(denuncia);
 		return new DenunciaDTO(denuncia);
 	}
 	
-		
+	
+	
 }

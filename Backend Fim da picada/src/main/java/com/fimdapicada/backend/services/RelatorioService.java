@@ -2,6 +2,7 @@ package com.fimdapicada.backend.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,11 +33,11 @@ public class RelatorioService {
 		   
 	   }
 	   
-	/*  public RelatorioDTO findId(Integer id) {
-           Optional<relatorio> produto = repository.findById(id);
+	 public RelatorioDTO findId(Integer id) {
+           Optional<relatorio> relatorio = repository.findById(id);
            RelatorioDTO relatorioDTO = new RelatorioDTO(relatorio.get());
            return relatorioDTO; 
 	   }
-    */
+    
 		
 }
